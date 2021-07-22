@@ -10,9 +10,8 @@ class PublicController extends Controller
     public function update(Request $request)
     {
         $file = fopen("archivo.txt", "w");
-        fwrite($file, json_encode($request) . PHP_EOL);
+        fwrite($file, $request->getContent() . PHP_EOL);
         fclose($file);
-
         return 'ok';
     }
 }
