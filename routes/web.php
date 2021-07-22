@@ -15,6 +15,4 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->post('/public', function () {
-    return 'ok';
-});
+$router->post('/public', 'PublicController@update');
