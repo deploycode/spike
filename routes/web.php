@@ -15,18 +15,6 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('public', function () {
-    return new \Symfony\Component\HttpFoundation\JsonResponse(array(
-
-            "Domain"=>"tigocolombiaqa",
-            "OrderId"=> "v52277740atmc-01",
-            "State"=>"ready-for-handling",
-            "LastState"=>"window-to-cancel",
-            "LastChange"=>"2019-08-14T17:11:39.2550122Z",
-            "CurrentChange"=>"2019-08-14T17:12:48.0965893Z",
-            "Origin"=> array(
-                        "Account"=>"tigocolombiaqa",
-                        "Key"=>"vtexappkey-tigocolombiaqa-NSYTJL",
-            )
-    ));
+$router->post('/public', function () {
+    return 'ok';
 });
